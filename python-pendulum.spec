@@ -22,7 +22,6 @@ BuildRequires:	python%{pyver}dist(maturin)
 BuildRequires:	python%{pyver}dist(cython)
 BuildRequires:	python%{pyver}dist(pip)
 BuildRequires:	python%{pyver}dist(python-dateutil) >= 2.6
-BuildRequires:	python%{pyver}dist(pytz)
 BuildRequires:	python%{pyver}dist(tzdata) >= 2020.1
 %if %{with test}
 BuildRequires:	python%{pyver}dist(freezegun)
@@ -32,6 +31,7 @@ BuildRequires:	python%{pyver}dist(poetry)
 BuildRequires:	python%{pyver}dist(pre-commit)
 BuildRequires:	python%{pyver}dist(pytest)
 BuildRequires:	python%{pyver}dist(pytest-cov)
+BuildRequires:	python%{pyver}dist(pytz) >= 2022.1
 BuildRequires:	python%{pyver}dist(six)
 BuildRequires:	python%{pyver}dist(time-machine) >= 2.16
 BuildRequires:	python%{pyver}dist(typing-extensions)
