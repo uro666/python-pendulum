@@ -73,9 +73,10 @@ cd rust
 
 %if %{with test}
 %check
-# skip failing tests
-skiptests="not test_ko and not test_bg and not test_invalid"
-%{__python} -m pytest -v tests/ -k "${skiptests}"
+export CI=true
+export PYTHONPATH="%{buildroot}%{python_sitearch}:${PWD}"
+%{__python} -m pytest -v -rs --import-mode importlib tests/
+
 %endif
 
 %files
