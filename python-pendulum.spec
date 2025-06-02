@@ -75,7 +75,7 @@ cd rust
 %check
 export CI=true
 export PYTHONPATH="%{buildroot}%{python_sitearch}:${PWD}"
-%{__python} -m pytest -v -rs --import-mode importlib tests/
+%{__python} -m pytest -v -rs --import-mode=importlib tests/
 
 %endif
 
